@@ -1,7 +1,7 @@
 const mongoose = require(`mongoose`);
 const { model, Schema } = mongoose;
 
-const PistolSchema = Schema({
+const RifleSchema = Schema({
   model: {
     type: String,
     required: true,
@@ -39,7 +39,12 @@ const PistolSchema = Schema({
     required: true,
     trim: true,
   },
-  sights: {
+  magType: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  actionType: {
     type: String,
     required: true,
     trim: true,
@@ -48,14 +53,42 @@ const PistolSchema = Schema({
     type: String,
     trim: true,
   },
-  threadedBarrel: {
+  stockType: {
     type: String,
     required: true,
     trim: true,
-    enum: ["Yes", "No"],
-    default: "No",
   },
-  size: {
+  barrelLength: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  barrelMaterial: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  triggerType: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  twistRate: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  foreendType: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  gripType: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  receiverFinish: {
     type: String,
     required: true,
     trim: true,
@@ -75,17 +108,12 @@ const PistolSchema = Schema({
     required: true,
     trim: true,
   },
-  barrelLength: {
-    type: String,
-    required: true,
-    trim: true,
-  },
   weight: {
     type: String,
     required: true,
     trim: true,
   },
-  sightRadius: {
+  threads: {
     type: String,
     required: true,
     trim: true,
@@ -95,75 +123,10 @@ const PistolSchema = Schema({
     required: true,
     trim: true,
   },
-  triggerAction: {
+  operatingSystem: {
     type: String,
     required: true,
     trim: true,
-  },
-  triggerType: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  gripModule: {
-    type: String,
-    trim: true,
-  },
-  gripType: {
-    type: String,
-    trim: true,
-  },
-  gripColor: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  barrelMaterial: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  frameFinish: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  frameMaterial: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  fcuFinish: {
-    type: String,
-    trim: true,
-  },
-  fcuMaterial: {
-    type: String,
-    trim: true,
-  },
-  slideFinish: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  slideMaterial: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  manualSafety: {
-    type: String,
-    required: true,
-    trim: true,
-    enum: ["Yes", "No"],
-    default: "No",
-  },
-  opticReady: {
-    type: String,
-    required: true,
-    trim: true,
-    enum: ["Yes", "No"],
-    default: "No",
   },
   price: {
     type: Number,
@@ -192,4 +155,4 @@ const PistolSchema = Schema({
   },
 });
 
-module.exports = model(`Pistol`, PistolSchema);
+module.exports = model("Rifle", RifleSchema);
