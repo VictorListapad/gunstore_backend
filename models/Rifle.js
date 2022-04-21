@@ -2,6 +2,10 @@ const mongoose = require(`mongoose`);
 const { model, Schema } = mongoose;
 
 const RifleSchema = Schema({
+  type: {
+    type: String,
+    default: "rifle",
+  },
   model: {
     type: String,
     required: true,
@@ -55,7 +59,6 @@ const RifleSchema = Schema({
   },
   stockType: {
     type: String,
-    required: true,
     trim: true,
   },
   barrelLength: {
@@ -70,7 +73,6 @@ const RifleSchema = Schema({
   },
   triggerType: {
     type: String,
-    required: true,
     trim: true,
   },
   twistRate: {
@@ -78,7 +80,7 @@ const RifleSchema = Schema({
     required: true,
     trim: true,
   },
-  foreendType: {
+  forendType: {
     type: String,
     required: true,
     trim: true,

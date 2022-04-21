@@ -2,6 +2,10 @@ const mongoose = require(`mongoose`);
 const { model, Schema } = mongoose;
 
 const PistolSchema = Schema({
+  type: {
+    type: String,
+    default: "pistol",
+  },
   model: {
     type: String,
     required: true,
