@@ -15,7 +15,12 @@ const AmmunitionSchema = Schema({
     required: true,
     trim: true,
   },
-  description: {
+  shortDescription: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  fullDescription: {
     type: String,
     required: true,
     trim: true,
@@ -61,6 +66,31 @@ const AmmunitionSchema = Schema({
     type: Number,
     required: true,
     trim: true,
+  },
+  price: {
+    type: Number,
+    required: true,
+    trim: true,
+  },
+  titleImg: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  extraImg1: {
+    type: String,
+    trim: true,
+    default: "",
+  },
+  extraImg2: {
+    type: String,
+    trim: true,
+    default: "",
+  },
+  extraImg3: {
+    type: String,
+    trim: true,
+    default: "",
   },
 });
 

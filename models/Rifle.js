@@ -16,7 +16,12 @@ const RifleSchema = Schema({
     required: true,
     trim: true,
   },
-  description: {
+  shortDescription: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  fullDescription: {
     type: String,
     required: true,
     trim: true,
