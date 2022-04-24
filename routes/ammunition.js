@@ -6,7 +6,7 @@ const Ammunition = require(`../models/Ammunition`);
 router.get(`/`, async (req, res) => {
   const allAmmunition = await Ammunition.find();
   try {
-    return res.status(200).json({ allAmmunition });
+    return res.status(200).json(allAmmunition);
   } catch (error) {
     return res.status(500).json({ message: `Couldn't get ammunition` });
   }
