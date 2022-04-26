@@ -6,6 +6,10 @@ const PistolSchema = Schema({
     type: String,
     default: "pistol",
   },
+  newProduct: {
+    type: Boolean,
+    required: true,
+  },
   model: {
     type: String,
     required: true,

@@ -16,6 +16,10 @@ const GearSchema = Schema({
     required: true,
     trim: true,
   },
+  newProduct: {
+    type: Boolean,
+    required: true,
+  },
   manufacturer: {
     type: String,
     required: true,

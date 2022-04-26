@@ -6,6 +6,10 @@ const RifleSchema = Schema({
     type: String,
     default: "rifle",
   },
+  newProduct: {
+    type: Boolean,
+    required: true,
+  },
   model: {
     type: String,
     required: true,
