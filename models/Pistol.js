@@ -30,6 +30,10 @@ const PistolSchema = Schema({
     required: true,
     trim: true,
   },
+  features: {
+    type: String,
+    trim: true,
+  },
   availability: {
     type: String,
     required: true,

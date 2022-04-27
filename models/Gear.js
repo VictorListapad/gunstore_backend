@@ -7,11 +7,19 @@ const GearSchema = Schema({
   },
   preciseType: {
     type: String,
-    enum: ["Knife", "Optics", "Bag", "Vest", "Ear&Eye Protection", "Holster"],
+    enum: [
+      "Knife",
+      "Optics",
+      "Bag",
+      "Vest",
+      "EarAndEyeProtection",
+      "Holster",
+      "PlateCarrier",
+    ],
     required: true,
     trim: true,
   },
-  name: {
+  model: {
     type: String,
     required: true,
     trim: true,
@@ -23,6 +31,14 @@ const GearSchema = Schema({
   manufacturer: {
     type: String,
     required: true,
+    trim: true,
+  },
+  features: {
+    type: String,
+    trim: true,
+  },
+  availableSizes: {
+    type: String,
     trim: true,
   },
   shortDescription: {
@@ -63,6 +79,14 @@ const GearSchema = Schema({
     trim: true,
   },
   battery: {
+    type: String,
+    trim: true,
+  },
+  material: {
+    type: String,
+    trim: true,
+  },
+  color: {
     type: String,
     trim: true,
   },
