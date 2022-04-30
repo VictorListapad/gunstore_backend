@@ -18,6 +18,7 @@ app.use(`/api/pistols`, require(`./routes/pistol`));
 app.use(`/api/rifles`, require(`./routes/rifle`));
 app.use(`/api/ammunition`, require(`./routes/ammunition`));
 app.use(`/api/gear`, require(`./routes/gear`));
+app.use(`/api/auth`, require(`./routes/user`));
 // start listening on server
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
