@@ -57,4 +57,37 @@ router.post(`/signin`, async (req, res) => {
   return res.status(200).json({ token, user });
 });
 
+// GET USER BY ID
+router.get(`/user/:id`, async (req, res) => {
+  const { id } = req.params;
+  const singleUser = await User.findById(id);
+  try {
+    return res.status(200).json(singleUser);
+  } catch (error) {
+    return res.status(500).json({ message: `Couldn't get the user` });
+  }
+});
+// UPDATE USER
+router.put(`/user/:id`, async (req, res) => {
+  const { id } = req.params;
+  const userToUpdate = await User.findByIdAndUpdate(id, req.body, {
+    new: true,
+  });
+  try {
+    return res.status(202).json(userToUpdate);
+  } catch (error) {
+    return res.status(500).json({ message: `Couldn't update user` });
+  }
+});
+// DELETE USER
+router.delete(`/user/:id`, async (req, res) => {
+  const { id } = req.params;
+  await User.findByIdAndDelete(id);
+  try {
+    return res.status(203).json({ message: `Successfully Deleted` });
+  } catch (error) {
+    return res.status(500).json({ message: `Couldn't delete user` });
+  }
+});
+
 module.exports = router;
