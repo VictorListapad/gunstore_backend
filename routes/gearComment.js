@@ -12,7 +12,7 @@ router.get(`/`, async (req, res) => {
   }
 });
 
-// GET ALL COMMENTS FOR GAME
+// GET ALL COMMENTS FOR GEAR
 router.get(`/item/:id`, async (req, res) => {
   const { id } = req.params;
   const comments = await GearComment.find({ productId: id })
