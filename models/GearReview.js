@@ -18,6 +18,10 @@ const GearReviewSchema = Schema({
     default: 5,
     required: true,
   },
+  date: {
+    type: Date,
+    required: true,
+  },
   productId: {
     type: Schema.Types.ObjectId,
     ref: "Gear",
