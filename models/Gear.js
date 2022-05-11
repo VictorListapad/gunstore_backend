@@ -74,6 +74,10 @@ const GearSchema = Schema({
     type: String,
     trim: true,
   },
+  systemIncludes: {
+    type: String,
+    trim: true,
+  },
   attachmentType: {
     type: String,
     trim: true,

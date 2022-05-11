@@ -4,9 +4,9 @@ const GearComment = require(`../models/GearComment`);
 
 // GET ALL COMMENTS
 router.get(`/`, async (req, res) => {
-  const allGear = await GearComment.find();
+  const allGearComments = await GearComment.find();
   try {
-    return res.status(200).json(allGear);
+    return res.status(200).json(allGearComments);
   } catch (error) {
     return res.status(500).json({ message: `Couldn't get gear comments` });
   }

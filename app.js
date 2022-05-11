@@ -21,6 +21,7 @@ app.use(`/api/gear`, require(`./routes/gear`));
 app.use(`/api/auth`, require(`./routes/user`));
 app.use(`/api/gearComments`, require(`./routes/gearComment`));
 app.use(`/api/gearReviews`, require(`./routes/gearReview`));
+app.use(`/api/pistolComments`, require(`./routes/pistolComment`));
 // start listening on server
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
