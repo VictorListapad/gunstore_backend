@@ -30,7 +30,9 @@ router.get(`/pistol/:id`, async (req, res) => {
 // GET COMMENT BY ID
 router.get(`/pistolComment/:id`, async (req, res) => {
   const { id } = req.params;
-  const singleComment = await PistolComment.findById(id);
+  const singleComment = await PistolComment.findById(id)
+    .populate(`author`)
+    .populate(`productId`);
   try {
     return res.status(200).json(singleComment);
   } catch (error) {
